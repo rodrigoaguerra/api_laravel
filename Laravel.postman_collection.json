@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "704fbfd0-4101-404a-be28-7b8b7dc2b8d7",
+		"_postman_id": "be32c460-1547-4308-960c-de754ce7c0bb",
 		"name": "Laravel",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "14695510"
+		"_exporter_id": "14695510",
+		"_collection_link": "https://speeding-firefly-69130.postman.co/workspace/laravel~aa20b0d9-dcb1-4fc3-8bde-496007d812a6/collection/14695510-be32c460-1547-4308-960c-de754ce7c0bb?action=share&source=collection_link&creator=14695510"
 	},
 	"item": [
 		{
@@ -34,7 +35,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cep\": \"80240-040\",\n    \"logradouro\": \"Av. Pres. Getúlio Vargas\",\n    \"complemento\": \"\",\n    \"bairro\": \"Água Verde\",\n    \"localidade\": \"Curitiba\",\n    \"uf\": \"PR\"\n}",
+							"raw": "{\n    \"cep\": \"82630-490\",\n    \"logradouro\": \"Estrada de Santa Cândida\",\n    \"bairro\": \"Santa Cândida\",\n    \"localidade\": \"Curitiba\",\n    \"uf\": \"PR\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71,7 +72,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"logradouro\": \"Rua Amazonas\",\n    \"bairro\": \"Campo Pequeno\",\n    \"localidade\": \"Colombo\",\n    \"uf\": \"PR\"\n}",
+							"raw": "{\n    \"cep\": \"82630-490\",\n    \"logradouro\": \"Estrada de Santa Cândida\",\n    \"bairro\": \"Santa Cândida\",\n    \"localidade\": \"Curitiba\",\n    \"uf\": \"PR\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -79,13 +80,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/cep/83404-400",
+							"raw": "{{base_url}}/cep",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"cep",
-								"83404-400"
+								"cep"
 							]
 						}
 					},
@@ -97,13 +97,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/cep/80240-040",
+							"raw": "{{base_url}}/cep/82630-490",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"cep",
-								"80240-040"
+								"82630-490"
 							]
 						}
 					},
@@ -113,11 +113,23 @@
 					"name": "fuzzySearch",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cep/busca/av",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cep",
+								"busca",
+								"av"
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "O projeto consiste em um sistema para buscar informações de CEPs em um banco de dados local ou em uma API externa (como a ViaCEP), permitindo a consulta de endereços por CEPs específicos e implementando uma funcionalidade de busca difusa (fuzzy search) para encontrar CEPs com base em termos parciais do endereço."
 		}
 	],
 	"event": [

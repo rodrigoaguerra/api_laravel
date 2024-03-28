@@ -24,6 +24,7 @@ class StoreUpdateCepRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
+            'cep' =>  ['required', 'regex:/^\d{5}-\d{3}$/'],
             'logradouro' => 'required|string',
             'bairro' => 'required|string',
             'localidade' => 'required|string',

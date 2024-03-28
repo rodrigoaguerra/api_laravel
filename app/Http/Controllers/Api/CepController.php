@@ -62,8 +62,8 @@ class CepController extends Controller
         return new CepResource($cep);
     }
 
-    public function update(StoreUpdateCepRequest $request, string $cep) {
-        $cepData = Cep::where('cep', $cep)->first();
+    public function update(StoreUpdateCepRequest $request) {
+        $cepData = Cep::where('cep', $request->cep)->first();
         
         if ($cepData) {
             $data = $request->validated();        
