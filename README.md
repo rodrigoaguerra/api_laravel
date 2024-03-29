@@ -4,7 +4,7 @@ O projeto consiste em um sistema para buscar informações de CEPs em um banco d
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone git@github.com:rodrigoaguerra/api_laravel.git
+git clone https://github.com/rodrigoaguerra/api_laravel.git
 ```
 
 Navegue para pasta do projeto
