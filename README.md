@@ -60,5 +60,13 @@ Rodar o servidor na porta 8000
 php artisan serve
 ```
 
-Importar o arquivo "Laravel.postman_collection.json" para o software "POSTMAN"
+Importar o arquivo "Laravel.postman_collection.json" para o software "POSTMAN",
 nele contém as rotas para o teste do projeto;
+
+### Rotas para endpoints
+
+- [GET] /api/cep/{cep} = busca na base local ou em uma api externa
+- [POST] /api/cep = cria um novo cep na base de dados local
+- [PATCH] /api/cep = atualiza dados do cep na base local
+- [DELETE] /api/cep/{cep} = remove um cep da base local
+- [GET] /api/busca/{searchTerm} = faz a busca difusa no banco de dados  

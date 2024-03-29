@@ -12,8 +12,13 @@ use App\Models\Cep;
 
 class CepController extends Controller
 {
-    public function index(string $cep)
-    {
+    /**
+     * Busca informações de CEPs em um 
+     * banco de dados local ou em uma API externa 
+     * @param string $cep
+     * @return void
+     */
+    public function index(string $cep) {
         // Consulta se o cep esta na base de dados
         $data = Cep::where('cep', $cep)->first();
         
@@ -31,7 +36,7 @@ class CepController extends Controller
         // Verificar se o CEP foi encontrado
         if (isset($cepData['cep'])) {
             
-            // salva o novo cep na base de dados
+            // Salva o novo cep na base de dados
             $cep = Cep::create([
                 'cep' => $cepData['cep'],
                 'logradouro' => $cepData['logradouro'],
@@ -46,6 +51,12 @@ class CepController extends Controller
         }
     }
 
+    /**
+     * Cadastra um novo cep, ou retorna 
+     * o cep se o mesmo já está cadastrado
+     * @param StoreUpdateCepRequest $request
+     * @return void
+     */
     public function store(StoreUpdateCepRequest $request) {
         // Consulta se o cep esta na base de dados
         $data = Cep::where('cep', $request->cep)->first();
@@ -62,7 +73,13 @@ class CepController extends Controller
         return new CepResource($cep);
     }
 
+    /**
+     * Atualiza dados de um cep
+     * @param StoreUpdateCepRequest $request
+     * @return void
+     */
     public function update(StoreUpdateCepRequest $request) {
+        // busca o cep na base de dados
         $cepData = Cep::where('cep', $request->cep)->first();
         
         if ($cepData) {
@@ -76,6 +93,11 @@ class CepController extends Controller
         }
     }
 
+    /**
+     * Remove um cep da base de dados
+     * @param string $cep
+     * @return void
+     */
     public function destroy(string $cep) {
         $cepData = Cep::where('cep', $cep)->first();
         
