@@ -1,6 +1,11 @@
 # Projeto Busca CEP
 O projeto consiste em um sistema para buscar informações de CEPs em um banco de dados local ou em uma API externa (como a ViaCEP), permitindo a consulta de endereços por CEPs específicos e implementando uma funcionalidade de busca difusa (fuzzy search) para encontrar CEPs com base em termos parciais do endereço.
 
+### Requerimentos 
+- PHP ^8.2
+- MYSQL ^5
+- Composer ^2
+
 ### Passo a passo
 Clone Repositório
 ```sh
