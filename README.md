@@ -60,7 +60,7 @@ Rodar o servidor na porta 8000
 php artisan serve
 ```
 
-Importar o arquivo "Laravel.postman_collection.json", pesente na pasta 'api_laravel', para o software "POSTMAN",
+Importar o arquivo "Laravel.postman_collection.json", presente na pasta 'api_laravel', para o software "POSTMAN",
 nele contém as rotas para o teste do projeto;
 
 ### Rotas para endpoints
